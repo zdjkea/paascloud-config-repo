@@ -14,7 +14,7 @@ spring:
     joda-date-time-format: yyyy-MM-dd HH:mm:ss
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
-    url: jdbc:mysql://paascloud-db-mysql:3306/paascloud_opc?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://10.0.1.205:3316/paascloud_opc?useUnicode=true&characterEncoding=UTF-8
 
 liquibase:
   change-log: classpath:liquibase/index.xml
@@ -58,7 +58,7 @@ paascloud:
     interceptor:
       enable: true
   zk:
-    zkAddressList: paascloud-provider-zk:2181
+    zkAddressList: 10.0.1.205:2181
   qiniu:
     key:
       accessKey: yourQiniuAccessKey
@@ -84,7 +84,7 @@ paascloud:
       enable: true
       reliableMessageConsumer: true
       reliableMessageProducer: false
-      namesrvAddr: paascloud-mq-rocket:9876
+      namesrvAddr: 10.0.0.207:9876
       instanceName: paascloud-provider-opc
       consumerGroup: CID_OPC
       producerGroup: PID_OPC

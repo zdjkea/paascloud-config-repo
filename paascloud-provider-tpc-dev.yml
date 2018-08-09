@@ -2,7 +2,7 @@ spring:
   cache:
     cache-names: tpc-cache
   datasource:
-    url: jdbc:mysql://paascloud-db-mysql:3306/paascloud_tpc?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://10.0.1.205:3316/paascloud_tpc?characterEncoding=utf8&useSSL=false
 
 liquibase:
   change-log: classpath:liquibase/index.xml
@@ -57,7 +57,7 @@ paascloud:
       enable: false
       reliableMessageConsumer: false
       reliableMessageProducer: true
-      namesrvAddr: paascloud-mq-rocket:9876
+      namesrvAddr: 10.0.0.207:9876
       instanceName: paascloud-provider-tpc
       producerGroup: PID_TPC
   oauth2:
@@ -70,7 +70,7 @@ paascloud:
       clientAuthenticationScheme: header
       tokenStore: jwt
   zk:
-    zkAddressList: paascloud-provider-zk:2181
+    zkAddressList: 10.0.1.205:2181
     namespace: paascloud-elastic-job
   job:
     task:
