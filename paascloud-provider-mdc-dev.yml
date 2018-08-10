@@ -7,7 +7,7 @@ spring:
   cache:
     cache-names: mdc-cache
   datasource:
-    url: jdbc:mysql://paascloud-db-mysql:3316/paascloud_mdc?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://10.0.1.205:3316/paascloud_mdc?characterEncoding=utf8&useSSL=false
 
 liquibase:
   change-log: classpath:liquibase/index.xml
