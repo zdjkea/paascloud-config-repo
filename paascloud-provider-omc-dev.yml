@@ -6,6 +6,8 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
   datasource:
     url: jdbc:mysql://10.0.1.205:3316/paascloud_omc?useUnicode=true&characterEncoding=UTF-8
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
 
 liquibase:
   change-log: classpath:liquibase/index.xml

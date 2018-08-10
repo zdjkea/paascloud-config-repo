@@ -3,6 +3,8 @@ spring:
     cache-names: tpc-cache
   datasource:
     url: jdbc:mysql://10.0.1.205:3316/paascloud_tpc?characterEncoding=utf8&useSSL=false
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
 
 liquibase:
   change-log: classpath:liquibase/index.xml
